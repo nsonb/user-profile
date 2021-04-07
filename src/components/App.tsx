@@ -1,6 +1,13 @@
+import { UserContextProvider } from '../context/UserContext'
+
+// components
+import Landing from './Landing'
+
 const App = () => {
   return (
-    <div>I am app</div>
+    <UserContextProvider>
+      <Landing></Landing>
+    </UserContextProvider>
   )
 }
 
