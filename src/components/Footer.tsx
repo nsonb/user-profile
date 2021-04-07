@@ -1,12 +1,12 @@
 import { DefaultContainer } from './common/container'
-import { Heading1 } from './common/typography'
+import { Heading2 } from './common/typography'
 
 const Footer = () => {
   return (
     <DefaultContainer>
-      <Heading1>
-        I am Header
-      </Heading1>
+      <Heading2>
+        fire of my life
+      </Heading2>
     </DefaultContainer>
   )
 }

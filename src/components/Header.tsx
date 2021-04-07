@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <DefaultContainer>
       <Heading1>
-        awesome-app
+        wholesome-app
       </Heading1>
     </DefaultContainer>
   )
