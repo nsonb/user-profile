@@ -22,6 +22,7 @@ export const Button = styled.button`
   padding: 1rem;
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
   border: none;
   background-color: ${props => props.theme.tertiary};
   color: ${props => props.theme.dark_grey};
