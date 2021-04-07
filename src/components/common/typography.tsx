@@ -2,18 +2,14 @@ import styled from 'styled-components'
 
 export const Heading1 = styled.h1`
   display: block;
-  width: fit-content;
-  font-size: 2.5rem;
-  margin: auto 1rem;
-  font-family: 'Lobster', cursive;
+  width: 40rem;
+  font-size: 12rem;
+  font-family: 'Space Grotesk', sans-serif;
   color: ${props => props.theme.primary};
   cursor: pointer;
   transition: all .2s;
   padding: .4rem;
-
-  &:hover {
-    color: ${props => props.theme.gold};;
-  }
+  line-height: 12rem;
 `
 export const Heading2 = styled.h2`
   font-family: 'Montserrat', sans-serif;

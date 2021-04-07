@@ -7,7 +7,7 @@ const Header = (props: {setTheme: () => void}) => {
   return (
     <DefaultContainer>
       <Heading1 onClick={() => {console.log('go home')}}>
-        wholesome-app
+        People of the  <span style={{color: 'gold'}}>{'<decade>'}</span>
       </Heading1>
       <SwitchButton onClick={() => {props.setTheme()}}>
         daymode
