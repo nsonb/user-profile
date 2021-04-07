@@ -11,12 +11,13 @@ const LandingBox = styled.div({
   flexWrap: 'wrap', 
   width: '80%', 
   minWidth: '240px', 
-  maxWidth: '800px', 
+  maxWidth: '1200px', 
   margin: '0 auto', 
   padding: '3rem 2rem',
   alignContent: 'flex-start',
-  justifyContent: 'space-around'
+  justifyContent: 'space-around',
 })
+
 const Landing = () => {
   const { user, getUser } = useContext(UserContext)
 
@@ -29,7 +30,7 @@ const Landing = () => {
   // when data is not yet returned from server
   if ( user === undefined) {
     return (
-      <div>Loading...</div>
+      <LandingBox>Loading...</LandingBox>
     )
   }
   

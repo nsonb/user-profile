@@ -5,7 +5,8 @@ const Footer = () => {
   return (
     <DefaultContainer>
       <Heading2>
-        fire of my life
+        light of my life
+        fire of my loin
       </Heading2>
     </DefaultContainer>
   )

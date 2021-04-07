@@ -4,7 +4,9 @@ export const light_theme = {
   tertiary: '#F2F2F2',
 
   light_grey: '#D9D9D9',
-  dark_grey: '#BFBFBF'
+  dark_grey: '#BFBFBF',
+
+  white: '#FFF'
 
 }
 
