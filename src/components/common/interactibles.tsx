@@ -1,6 +1,25 @@
 import styled from 'styled-components'
 
-export const SwitchButton = styled.div``
+export const SwitchButton = styled.div`
+  height: 3rem;
+  width: 8rem;
+  background-color: ${props => props.theme.dark_grey};
+  border-radius: .8rem;
+  cursor: pointer;
+  line-height: 3rem;
+  transition: all .4s;
+
+  &::after{
+    content: "";
+    border-radius: .8rem;
+    height: 100%;
+    width: 30%;
+    background-color: ${props => props.theme.white};
+    float: ${props => props.theme.position};
+    box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+    transition: all .4s;
+  }
+`
 
 export const Avatar = styled.div`
   background-color: ${props => props.theme.dark_grey};

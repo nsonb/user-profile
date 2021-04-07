@@ -3,12 +3,13 @@ import { createGlobalStyle } from 'styled-components'
 
 // theme
 import { ThemeProvider } from 'styled-components'
-import { light_theme } from './common/theme'
+import { light_theme, dark_theme } from './common/theme'
 
 // components
 import Landing from './Landing'
 import Header from './Header'
 import Footer from './Footer'
+import { useState } from 'react'
 
 // global style for reset
 const GlobalStyle = createGlobalStyle`
@@ -21,11 +22,16 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const App = () => {
+  const [ theme, setTheme ] = useState(true)
+
+  const switchTheme = () => {
+    setTheme(!theme)
+  }
   return (
     <UserContextProvider>
       <GlobalStyle />
-      <ThemeProvider theme={light_theme}>
-        <Header/>
+      <ThemeProvider theme={theme? light_theme : dark_theme}>
+        <Header setTheme={switchTheme}/>
         <Landing/>
         <Footer/>
       </ThemeProvider>
