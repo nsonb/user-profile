@@ -6,8 +6,8 @@ export const light_theme = {
   light_grey: '#D9D9D9',
   dark_grey: '#BFBFBF',
 
-  white: '#FFF'
-
+  white: '#FFF',
+  gold: 'gold'
 }
 
 export const dark_theme = {

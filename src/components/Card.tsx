@@ -3,7 +3,14 @@ import { User } from '../type'
 
 //
 import { Heading3, SubHeading } from './common/typography'
-import { Avatar } from './common/interactibles'
+import { Avatar, Button } from './common/interactibles'
+
+const CardButton = styled(Button)`
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+`
 
 const CardContainer = styled.div`
   display: block;
@@ -18,6 +25,7 @@ const CardContainer = styled.div`
   cursor: pointer;
   transition: all .4s;
   box-shadow: 0px 5px 8px 1px rgba(0,0,0,0.2);
+  position: relative;
 
   &:hover {
     transform: translateY(-.4rem);
@@ -27,12 +35,19 @@ const CardContainer = styled.div`
     & ${Avatar} {
       font-size: 3rem;
       background-color: ${props => props.theme.secondary};
-      color: gold;
+      color: ${props => props.theme.gold};;
       clip-path: circle(35% at 50% 50%);
       font-weight: 800;
     }
+
+    & ${CardButton} {
+      background-color: ${props => props.theme.gold};
+      color: ${props => props.theme.primary};
+    }
   }
 `
+
+
 
 const Card = (props: {user: User}) => {
   const { user } = props
@@ -41,6 +56,7 @@ const Card = (props: {user: User}) => {
       <Avatar> {user.name.charAt(0)} </Avatar>
       <Heading3> {user.name} </Heading3>
       <SubHeading> { '@'+user.username }</SubHeading>
+      <CardButton> more details </CardButton>
     </CardContainer>
   )
 }

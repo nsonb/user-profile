@@ -12,7 +12,7 @@ export const Heading1 = styled.h1`
   padding: .4rem;
 
   &:hover {
-    color: gold;
+    color: ${props => props.theme.gold};;
   }
 `
 export const Heading2 = styled.h2`
