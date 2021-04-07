@@ -1,17 +1,17 @@
 import { DefaultContainer } from './common/container'
-import { Heading1 } from './common/typography'
+import { Heading1, Emphasis } from './common/typography'
 import { SwitchButton } from './common/interactibles'
-import { setSyntheticLeadingComments } from 'typescript'
 
-const Header = (props: {setTheme: () => void}) => {
+const Header = (props: {setTheme: () => void, mode: string}) => {
   return (
     <DefaultContainer>
       <Heading1 onClick={() => {console.log('go home')}}>
-        People of the  <span style={{color: 'gold'}}>{'<decade>'}</span>
+        People of the 
+        <Emphasis 
+          onClick={() => {
+            props.setTheme()
+          }}> {`<${props.mode}>`}</Emphasis>
       </Heading1>
-      <SwitchButton onClick={() => {props.setTheme()}}>
-        daymode
-      </SwitchButton>
     </DefaultContainer>
   )
 }

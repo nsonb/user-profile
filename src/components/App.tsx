@@ -31,7 +31,7 @@ const App = () => {
     <UserContextProvider>
       <GlobalStyle />
       <ThemeProvider theme={theme? light_theme : dark_theme}>
-        <Header setTheme={switchTheme}/>
+        <Header setTheme={switchTheme} mode={theme? 'day' : 'night'}/>
         <Landing/>
         <Footer/>
       </ThemeProvider>

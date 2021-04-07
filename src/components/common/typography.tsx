@@ -6,7 +6,6 @@ export const Heading1 = styled.h1`
   font-size: 12rem;
   font-family: 'Space Grotesk', sans-serif;
   color: ${props => props.theme.primary};
-  cursor: pointer;
   transition: all .2s;
   padding: .4rem;
   line-height: 12rem;
@@ -32,4 +31,16 @@ export const SubHeading = styled.h4`
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   color: ${props => props.theme.dark_grey};
+`
+
+export const Emphasis = styled.span`
+  color: ${props => props.theme.gold};
+  background-color: ${props => props.theme.primary};
+  cursor: pointer;
+  transition: all .1s;
+
+  &:hover {
+    color: ${props => props.theme.primary};
+    background-color: ${props => props.theme.gold};
+  }
 `
