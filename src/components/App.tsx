@@ -1,4 +1,6 @@
 import { UserContextProvider } from '../context/UserContext'
+import Header from './Header'
+import Footer from './Footer'
 
 // components
 import Landing from './Landing'
@@ -6,7 +8,9 @@ import Landing from './Landing'
 const App = () => {
   return (
     <UserContextProvider>
-      <Landing></Landing>
+      <Header/>
+      <Landing/>
+      <Footer/>
     </UserContextProvider>
   )
 }
