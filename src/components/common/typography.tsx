@@ -12,4 +12,10 @@ export const Heading2 = styled.h2`
   font-family: 'Montserrat', sans-serif;
   color: ${props => props.theme.primary};
 `
-export const Heading3 = styled.h3``
+export const Heading3 = styled.h3`
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  height: 3rem;
+  padding: .5rem;
+
+`

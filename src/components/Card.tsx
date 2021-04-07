@@ -13,6 +13,7 @@ const CardContainer = styled.div`
   color: ${props => props.theme.tertiary};
   border-radius: .8rem;
   margin: .5rem;
+  cursor: pointer;
 `
 
 const Card = (props: {user: User}) => {
