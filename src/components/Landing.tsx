@@ -22,7 +22,7 @@ const Landing = () => {
   return (
     <div>
       I am Landing
-      { user.map((i: User, index) => <div>{i.name}</div> )}
+      {user.map((i: User, index) => <div key={i.id+index}>{i.name}</div>)}
     </div>
   )
 }

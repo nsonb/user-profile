@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <DefaultContainer>
       <Heading1>
-        I am Header
+        awesome-app
       </Heading1>
     </DefaultContainer>
   )
