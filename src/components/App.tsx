@@ -1,5 +1,6 @@
 import { UserContextProvider } from '../context/UserContext'
 import { createGlobalStyle } from 'styled-components'
+import { useState } from 'react'
 
 // theme
 import { ThemeProvider } from 'styled-components'
@@ -9,7 +10,7 @@ import { light_theme, dark_theme } from './common/theme'
 import Landing from './Landing'
 import Header from './Header'
 import Footer from './Footer'
-import { useState } from 'react'
+
 
 // global style for reset
 const GlobalStyle = createGlobalStyle`
@@ -31,9 +32,12 @@ const App = () => {
     <UserContextProvider>
       <GlobalStyle />
       <ThemeProvider theme={theme? light_theme : dark_theme}>
-        <Header setTheme={switchTheme} mode={theme? 'day' : 'night'}/>
-        <Landing/>
-        <Footer/>
+        <div>
+          <Header setTheme={switchTheme} mode={theme? 'day' : 'night'}/>
+          <Landing/>
+          <Footer/>
+        </div>
+        
       </ThemeProvider>
     </UserContextProvider>
   )

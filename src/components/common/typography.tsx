@@ -38,9 +38,21 @@ export const Emphasis = styled.span`
   background-color: ${props => props.theme.primary};
   cursor: pointer;
   transition: all .1s;
+  padding: .2rem;
+  margin-top: 1rem;
 
   &:hover {
     color: ${props => props.theme.primary};
     background-color: ${props => props.theme.gold};
   }
+`
+
+export const Quote = styled.p`
+  background-color: ${props => props.theme.white};
+  font-style: italic;
+  font-family: 'Montserrat', sans-serif;
+  color: ${props => props.theme.primary};
+  padding: 1rem;
+  font-size: 1.2rem;
+  text-align: right;
 `
