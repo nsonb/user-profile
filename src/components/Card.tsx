@@ -5,6 +5,9 @@ import { User } from '../type'
 import { Heading3, SubHeading } from './common/typography'
 import { Avatar, Button } from './common/interactibles'
 
+// navigation
+import { useHistory } from 'react-router-dom'
+
 const CardButton = styled(Button)`
   position: absolute;
   bottom: 1rem;
@@ -47,12 +50,11 @@ const CardContainer = styled.div`
   }
 `
 
-
-
 const Card = (props: {user: User}) => {
   const { user } = props
+  const history = useHistory()
   return (
-    <CardContainer>
+    <CardContainer onClick= {() => {history.push(`/profile/${user.id}`)}}>
       <Avatar> {user.name.charAt(0)} </Avatar>
       <Heading3> {user.name} </Heading3>
       <SubHeading> { '@'+user.username }</SubHeading>

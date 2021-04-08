@@ -3,12 +3,11 @@ import styled from 'styled-components'
 export const Heading1 = styled.h1`
   display: block;
   width: 40rem;
-  font-size: 12rem;
+  font-size: 11rem;
   font-family: 'Space Grotesk', sans-serif;
   color: ${props => props.theme.primary};
   transition: all .2s;
   padding: .4rem;
-  line-height: 12rem;
 `
 export const Heading2 = styled.h2`
   font-family: 'Montserrat', sans-serif;
@@ -37,7 +36,7 @@ export const Emphasis = styled.span`
   color: ${props => props.theme.gold};
   cursor: pointer;
   transition: all .1s;
-  padding: .2rem;
+  padding: .4rem;
   margin-top: 1rem;
   display: content;
 

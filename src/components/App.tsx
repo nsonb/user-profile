@@ -10,6 +10,14 @@ import { light_theme, dark_theme } from './common/theme'
 import Landing from './Landing'
 import Header from './Header'
 import Footer from './Footer'
+import Profile from './Profile'
+
+// routing
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
 
 // global style for reset
@@ -37,15 +45,23 @@ const App = () => {
     <UserContextProvider>
       <GlobalStyle />
       <ThemeProvider theme={theme? light_theme : dark_theme}>
-        <div>
-          <Header 
-            setTheme={switchTheme} 
-            mode={theme? 'day' : 'night'} 
-            setConvention = {switchConvention} 
-            conventionMode = {conventional? 'conventional' : 'unconventional'}/>
-          <Landing/>
-          <Footer/>
-        </div>
+        <Router>
+          <Switch>
+            <Route exact path='/'>
+              <Header 
+                setTheme={switchTheme} 
+                mode={theme? 'day' : 'night'} 
+                setConvention = {switchConvention} 
+                conventionMode = {conventional? 'conventional' : 'unconventional'}
+              />
+              <Landing/>
+              <Footer/>
+            </Route>
+            <Route path='/profile/:id'>
+              <Profile/>
+            </Route>
+          </Switch>
+        </Router>
       </ThemeProvider>
     </UserContextProvider>
   )

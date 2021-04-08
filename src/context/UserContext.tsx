@@ -19,9 +19,8 @@ export const UserContextProvider = (props: props) => {
   const getUser = () => {
     getPlaceHolder()
     .then((res: AxiosResponse) => {
-      console.log(res.data)
       const resData= JSON.parse(JSON.stringify(res.data)) as User[]
-        setUser(resData)
+      setUser(resData)
     })
     .catch((err: AxiosError) => {
       console.log(err)

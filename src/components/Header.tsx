@@ -1,7 +1,8 @@
 import { DefaultContainer } from './common/container'
-import { Heading1, Heading2, Emphasis, Quote } from './common/typography'
-import { SwitchButton } from './common/interactibles'
+import { Heading1, Emphasis, Quote } from './common/typography'
 import styled from 'styled-components'
+
+import { useHistory } from 'react-router-dom'
 
 const randomQuoteFromTheInternet = `Congratulations!
   Today is your day.
@@ -23,11 +24,6 @@ const randomQuoteFromTheInternet = `Congratulations!
   It's opener there
   in the wide open air.
 
-  Out there things can happen
-  and frequently do
-  to people as brainy
-  and footsy as you.
-
   And then things start to happen,
   don't worry. Don't stew.
   Just go right along.
@@ -39,30 +35,28 @@ const randomQuoteFromTheInternet = `Congratulations!
 
 const HeaderQuote = styled(Quote)`
   width: 32rem;
-  height: 20rem;
+  height: 24rem;
   text-align: right;
 `
 
 const Convention = styled(Emphasis)`
+  font-family: Lobster, cursive;
+  padding: 0 2rem 0 1rem;
 `
+
 const Header = (props: {
     setTheme: () => void, 
     mode: string, 
     setConvention: () => void,
     conventionMode: string
   }) => {
+    const history = useHistory()
     return (
       <DefaultContainer>
-        <Heading1 onClick={() => {console.log('go home')}}>
+        <Heading1 onClick={() => {history.push('/')}}>
           People of the<br/>
-          <Convention onClick={() => {
-              props.setConvention()}}>
-              {props.conventionMode}
-          </Convention><br/>
-          <Emphasis 
-            onClick={() => {
-              props.setTheme()
-            }}>{`<${props.mode}>`}</Emphasis>
+          <Convention onClick={() => {props.setConvention()}}>{props.conventionMode}</Convention>
+          <Emphasis onClick={() => {props.setTheme()}}>{`<${props.mode}>`}</Emphasis>
         </Heading1>
         
         <HeaderQuote>
