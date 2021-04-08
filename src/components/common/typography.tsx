@@ -35,11 +35,11 @@ export const SubHeading = styled.h4`
 
 export const Emphasis = styled.span`
   color: ${props => props.theme.gold};
-  background-color: ${props => props.theme.primary};
   cursor: pointer;
   transition: all .1s;
   padding: .2rem;
   margin-top: 1rem;
+  display: content;
 
   &:hover {
     color: ${props => props.theme.primary};
@@ -54,5 +54,4 @@ export const Quote = styled.p`
   color: ${props => props.theme.primary};
   padding: 1rem;
   font-size: 1.2rem;
-  text-align: right;
 `

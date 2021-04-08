@@ -1,5 +1,5 @@
 import { DefaultContainer } from './common/container'
-import { Heading1, Emphasis, Quote } from './common/typography'
+import { Heading1, Heading2, Emphasis, Quote } from './common/typography'
 import { SwitchButton } from './common/interactibles'
 import styled from 'styled-components'
 
@@ -14,11 +14,6 @@ const randomQuoteFromTheInternet = `Congratulations!
   any direction you choose.
   You're on your own. And you know what you know.
   And YOU are the guy who'll decide where to go.
-
-  You'll look up and down streets. Look 'em over with care.
-  About some you will say, "I don't choose to go there."
-  With your head full of brains and your shoes full of feet,
-  you're too smart to go down any not-so-good street.
 
   And you may not find any
   you'll want to go down.
@@ -44,25 +39,39 @@ const randomQuoteFromTheInternet = `Congratulations!
 
 const HeaderQuote = styled(Quote)`
   width: 32rem;
-  height: 30rem;
+  height: 20rem;
+  text-align: right;
 `
-const Header = (props: {setTheme: () => void, mode: string}) => {
-  return (
-    <DefaultContainer>
-      <Heading1 onClick={() => {console.log('go home')}}>
-        People of the <br/>
-        <Emphasis 
-          onClick={() => {
-            props.setTheme()
-          }}> {`<${props.mode}>`}</Emphasis>
-      </Heading1>
-      <HeaderQuote>
-        {randomQuoteFromTheInternet}<br/>
-        <Emphasis>Dr.Seuss</Emphasis>
-      </HeaderQuote>
 
-    </DefaultContainer>
-  )
+const Convention = styled(Emphasis)`
+`
+const Header = (props: {
+    setTheme: () => void, 
+    mode: string, 
+    setConvention: () => void,
+    conventionMode: string
+  }) => {
+    return (
+      <DefaultContainer>
+        <Heading1 onClick={() => {console.log('go home')}}>
+          People of the<br/>
+          <Convention onClick={() => {
+              props.setConvention()}}>
+              {props.conventionMode}
+          </Convention><br/>
+          <Emphasis 
+            onClick={() => {
+              props.setTheme()
+            }}>{`<${props.mode}>`}</Emphasis>
+        </Heading1>
+        
+        <HeaderQuote>
+          {randomQuoteFromTheInternet}<br/>
+          <Emphasis>Dr.Seuss</Emphasis>
+        </HeaderQuote>
+
+      </DefaultContainer>
+    )
 }
 
 export default Header

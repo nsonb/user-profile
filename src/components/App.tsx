@@ -24,20 +24,28 @@ const GlobalStyle = createGlobalStyle`
 
 const App = () => {
   const [ theme, setTheme ] = useState(true)
+  const [ conventional, setConventional ] = useState(true)
 
   const switchTheme = () => {
     setTheme(!theme)
+  }
+
+  const switchConvention = () => {
+    setConventional(!conventional)
   }
   return (
     <UserContextProvider>
       <GlobalStyle />
       <ThemeProvider theme={theme? light_theme : dark_theme}>
         <div>
-          <Header setTheme={switchTheme} mode={theme? 'day' : 'night'}/>
+          <Header 
+            setTheme={switchTheme} 
+            mode={theme? 'day' : 'night'} 
+            setConvention = {switchConvention} 
+            conventionMode = {conventional? 'conventional' : 'unconventional'}/>
           <Landing/>
           <Footer/>
         </div>
-        
       </ThemeProvider>
     </UserContextProvider>
   )
