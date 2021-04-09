@@ -7,15 +7,19 @@ import styled from 'styled-components'
 import Card from './Card'
 
 const LandingBox = styled.div({
-  display: 'flex',
-  flexWrap: 'wrap', 
-  width: '80%', 
+  width: '90%', 
   minWidth: '240px', 
   maxWidth: '1200px', 
   margin: '0 auto', 
   padding: '3rem 2rem',
   alignContent: 'flex-start',
   justifyContent: 'space-around',
+
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(17rem, 1fr))',
+  gridAutoRows: '22rem',
+  justifyItems: 'center',
+  alignItems: 'center'
 })
 
 const Landing = () => {
