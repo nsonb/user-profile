@@ -8,6 +8,7 @@ export const Heading1 = styled.h1`
   color: ${props => props.theme.primary};
   transition: all .2s;
   padding: .4rem;
+  line-height: 11rem;
 `
 export const Heading2 = styled.h2`
   font-family: 'Montserrat', sans-serif;
@@ -47,7 +48,6 @@ export const Emphasis = styled.span`
 `
 
 export const Quote = styled.p`
-  background-color: ${props => props.theme.white};
   font-style: italic;
   font-family: 'Montserrat', sans-serif;
   color: ${props => props.theme.primary};

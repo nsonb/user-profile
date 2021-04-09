@@ -35,7 +35,7 @@ const randomQuoteFromTheInternet = `Congratulations!
 
 const HeaderQuote = styled(Quote)`
   width: 32rem;
-  height: 24rem;
+  height: 22rem;
   text-align: right;
 `
 
@@ -63,7 +63,6 @@ const Header = (props: {
           {randomQuoteFromTheInternet}<br/>
           <Emphasis>Dr.Seuss</Emphasis>
         </HeaderQuote>
-
       </DefaultContainer>
     )
 }

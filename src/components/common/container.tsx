@@ -7,3 +7,8 @@ export const DefaultContainer = styled.div`
   display: flex;
   justify-content: space-between;
 `
+
+export const GridContainer = styled.div`
+  display: grid;
+  
+`
