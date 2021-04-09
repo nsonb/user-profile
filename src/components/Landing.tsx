@@ -7,11 +7,9 @@ import styled from 'styled-components'
 import Card from './Card'
 
 const LandingBox = styled.div({
-  width: '90%', 
   minWidth: '240px', 
-  maxWidth: '1200px', 
   margin: '0 auto', 
-  padding: '3rem 2rem',
+  padding: '3rem 1rem',
   alignContent: 'flex-start',
   justifyContent: 'space-around',
 

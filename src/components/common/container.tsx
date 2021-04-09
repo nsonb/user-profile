@@ -6,6 +6,7 @@ export const DefaultContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  background-color: ${props => props.theme.white};
 `
 
 export const GridContainer = styled.div`

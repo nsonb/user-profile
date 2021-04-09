@@ -41,6 +41,7 @@ const App = () => {
   const switchConvention = () => {
     setConventional(!conventional)
   }
+
   return (
     <UserContextProvider>
       <GlobalStyle />

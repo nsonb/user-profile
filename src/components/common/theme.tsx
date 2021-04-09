@@ -14,13 +14,13 @@ export const light_theme = {
 
 export const dark_theme = {
   primary: 'white',
-  secondary: 'dark',
+  secondary: 'beige',
   tertiary: 'grey',
 
-  light_grey: 'blue',
-  dark_grey: 'green',
+  light_grey: '#BFBFBF',
+  dark_grey: '#D9D9D9',
 
-  white: '#FFF',
+  white: 'black',
   gold: 'gold',
 
   position: 'right'
