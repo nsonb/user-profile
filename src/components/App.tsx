@@ -1,6 +1,7 @@
 import { UserContextProvider } from '../context/UserContext'
 import { createGlobalStyle } from 'styled-components'
 import { useState } from 'react'
+import { useStoredData } from '../hook/useStoredData'
 
 // theme
 import { ThemeProvider } from 'styled-components'
@@ -31,12 +32,13 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const App = () => {
-  const [ theme, setTheme ] = useState(true)
+  const [ theme, setTheme ] = useStoredData('theme', 'light')
   const [ conventional, setConventional ] = useState(true)
 
   // for switching theme in themeprovider
   const switchTheme = () => {
-    setTheme(!theme)
+    console.log(theme)
+    theme === 'light'? setTheme('dark') : setTheme('light')
   }
 
   const switchConvention = () => {
@@ -46,14 +48,14 @@ const App = () => {
   return (
     <UserContextProvider>
       <GlobalStyle />
-      <ThemeProvider theme={theme? light_theme : dark_theme}>
+      <ThemeProvider theme={theme === 'light'? light_theme : dark_theme}>
         <AppContainer>
           <Router>
             <Switch>
               <Route exact path='/'>
                 <Header 
                   setTheme={switchTheme} 
-                  mode={theme? 'day' : 'night'} 
+                  mode={theme === 'light'? ' light ' : ' dark '} 
                   setConvention = {switchConvention} 
                   conventionMode = {conventional? 'conventional' : 'unconventional'}
                 />

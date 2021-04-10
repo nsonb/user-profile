@@ -8,7 +8,7 @@ export const Heading1 = styled.h1`
   color: ${props => props.theme.primary};
   transition: all .2s;
   padding: .4rem;
-  line-height: 11rem;
+  line-height: 10rem;
 `
 export const Heading2 = styled.h2`
   font-family: 'Montserrat', sans-serif;
@@ -40,10 +40,9 @@ export const Emphasis = styled.span`
   padding: .4rem;
   margin-top: 1rem;
   display: content;
-
+  font-family: 'Lobster', cursive;
   &:hover {
     color: ${props => props.theme.primary};
-    background-color: ${props => props.theme.gold};
   }
 `
 

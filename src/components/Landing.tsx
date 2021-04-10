@@ -8,7 +8,6 @@ import Card from './Card'
 import { Heading2, Quote } from './common/typography'
 
 const LandingBox = styled.div`
-  minWidth: 240px; 
   margin: 2rem auto 0; 
   padding: 5rem 1rem;
   align-content: flex-start;
@@ -45,11 +44,13 @@ const LandingHeading = styled(Heading2)`
     padding: 1rem;
     text-align: center;
     width: 90%;
+    top: -3rem;
   }
 `
 
 const LandingQuote = styled(Quote)`
   grid-column: 1 / -1;
+  text-align: left;
 `
 const Landing = () => {
   const { user, getUser } = useContext(UserContext)

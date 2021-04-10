@@ -38,12 +38,13 @@ const HeaderQuote = styled(Quote)`
   height: 22rem;
   text-align: right;
 `
-
+/*
 const Convention = styled(Emphasis)`
   font-family: Lobster, cursive;
   padding: 0 2rem 0 1rem;
 `
-
+*/
+// <Convention onClick={() => {props.setConvention()}}>{props.conventionMode}</Convention>
 const Header = (props: {
     setTheme: () => void, 
     mode: string, 
@@ -55,7 +56,7 @@ const Header = (props: {
       <DefaultContainer>
         <Heading1 onClick={() => {history.push('/')}}>
           People of the<br/>
-          <Convention onClick={() => {props.setConvention()}}>{props.conventionMode}</Convention>
+          
           <Emphasis onClick={() => {props.setTheme()}}>{`<${props.mode}>`}</Emphasis>
         </Heading1>
         

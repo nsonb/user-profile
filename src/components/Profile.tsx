@@ -28,9 +28,9 @@ const Profile = () => {
 
   if (user === undefined) {
     return (
-      <div>
+      <GridContainer>
         Loading
-      </div>
+      </GridContainer>
     )
   }
 
