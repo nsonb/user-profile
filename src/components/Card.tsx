@@ -46,7 +46,7 @@ const CardContainer = styled.div`
 
     & ${CardButton} {
       background-color: ${props => props.theme.gold};
-      color: ${props => props.theme.primary};
+      color: ${props => props.theme.white};
     }
   }
 `

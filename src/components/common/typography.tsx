@@ -68,11 +68,13 @@ export const ProfileText = styled.p`
 `
 
 export const ProfileHeader = styled.h2`
+  display: block;
   font-size: 6rem;
   font-family: 'Montserrat', sans-serif;
   color: ${props => props.theme.gold};
   line-height: 6rem;
   width: fit-content;
+  max-width: 65rem;
   text-transform: uppercase;
   border-bottom: .2rem solid ${props => props.theme.gold};
   padding:  0 0 2rem 0 ;

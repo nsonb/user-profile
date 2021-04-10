@@ -54,4 +54,22 @@ export const Button = styled.button`
   }
 `
 
+export const BackButton = styled.button`
+  outline: none;
+  border: none;
+  color: ${props => props.theme.dark_grey  };
+  background-color: ${props => props.theme.white};
+  padding: 1rem;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all .4s;
+  &:hover {
+    color: ${props => props.theme.gold};
+    background-color: none;
+    text-decoration: underline;
+  }
+`
+
 //

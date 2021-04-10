@@ -7,7 +7,7 @@ export const light_theme = {
   dark_grey: '#BFBFBF',
 
   white: '#FFF',
-  gold: 'gold',
+  gold: '#B58033',
 
   position: 'left'
 }

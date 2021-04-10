@@ -10,7 +10,7 @@ import { AxiosError, AxiosResponse } from 'axios'
 // component
 import { ProfileText, ProfileHeader } from './common/typography'
 import { GridContainer, DetailContainerColumn, DetailContainerRow } from './common/container'
-import { Button } from './common/interactibles'
+import { Button, BackButton } from './common/interactibles'
 
 const ValueSpan = styled.span`
   font-size: 1rem;
@@ -20,9 +20,15 @@ const ValueSpan = styled.span`
   font-weight: 500;
 `
 
-const ProfileButton = styled(Button)`
+const ProfileButton = styled(BackButton)`
   background-color: ${props => props.theme.gold};
-  color: black;
+  color: ${props => props.theme.primary};
+  border-radius: .5rem;
+  padding: 1rem;
+  &:hover {
+    color: ${props => props.theme.white};
+    text-decoration: none;
+  }
 `
 
 const PseudoElement = styled.div`
@@ -57,11 +63,11 @@ const Profile = () => {
 
   return (
     <GridContainer style={{height: '100%'}}>
-      <Button
+      <BackButton
         style={{width: '8rem'}} 
         onClick={() => {history.goBack()}}>
-          Back
-      </Button>
+          &larr;   Back
+      </BackButton>
 
       <PseudoElement />
 
