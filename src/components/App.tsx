@@ -20,7 +20,6 @@ import {
   Route,
 } from "react-router-dom";
 
-
 // global style for reset
 const GlobalStyle = createGlobalStyle`
   * {
@@ -35,6 +34,7 @@ const App = () => {
   const [ theme, setTheme ] = useState(true)
   const [ conventional, setConventional ] = useState(true)
 
+  // for switching theme in themeprovider
   const switchTheme = () => {
     setTheme(!theme)
   }

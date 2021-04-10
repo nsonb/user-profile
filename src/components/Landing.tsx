@@ -10,7 +10,7 @@ import { Heading2, Quote } from './common/typography'
 const LandingBox = styled.div`
   minWidth: 240px; 
   margin: 2rem auto 0; 
-  padding: 3rem 1rem;
+  padding: 5rem 1rem;
   align-content: flex-start;
   justify-content: space-around;
   border: 2rem solid ${props => props.theme.primary};
@@ -19,12 +19,16 @@ const LandingBox = styled.div`
   
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
-  grid-template-rows: 5rem;
-  grid-auto-rows: 22rem;
+  grid-template-rows: repeat(auto-fill, minmax(5rem, 1fr));
+  grid-auto-rows: 23rem;
   justify-items: center;
   align-items: center;
 
   position: relative;
+
+  @media screen and (max-width: 488px) {
+    border: .5rem solid ${props => props.theme.primary};
+  }
 `
 const LandingHeading = styled(Heading2)`
   position: absolute;
@@ -34,6 +38,14 @@ const LandingHeading = styled(Heading2)`
   background-color: ${props => props.theme.white};
   border: .6rem solid ${props => props.theme.gold};
   padding: 2rem;
+
+  @media screen and (max-width: 488px) {
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem;
+    text-align: center;
+    width: 90%;
+  }
 `
 
 const LandingQuote = styled(Quote)`
