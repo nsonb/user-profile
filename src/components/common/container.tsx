@@ -7,6 +7,7 @@ export const DefaultContainer = styled.div`
   display: flex;
   justify-content: space-between;
   background-color: ${props => props.theme.white};
+  margin-top: 0;
 `
 
 export const GridContainer = styled.div`

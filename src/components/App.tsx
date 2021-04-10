@@ -64,8 +64,8 @@ const App = () => {
               </Route>
             </Switch>
           </Router>
+          <Footer/>
         </AppContainer>
-        <Footer/>
       </ThemeProvider>
     </UserContextProvider>
   )
