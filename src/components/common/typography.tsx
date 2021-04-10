@@ -13,6 +13,7 @@ export const Heading1 = styled.h1`
 export const Heading2 = styled.h2`
   font-family: 'Montserrat', sans-serif;
   color: ${props => props.theme.primary};
+  font-size: 5rem;
 `
 
 // 100;200;300;400;800
@@ -54,3 +55,6 @@ export const Quote = styled.p`
   padding: 1rem;
   font-size: 1.2rem;
 `
+
+export const DetailHeader = styled.h4``
+export const DetailValue = styled.h4``

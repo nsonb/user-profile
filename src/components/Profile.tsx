@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useHistory, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { User } from '../type'
 
 // axios
@@ -7,8 +7,8 @@ import { getSinglePlaceHolder } from '../api/placeholder'
 import { AxiosError, AxiosResponse } from 'axios'
 
 // component
-import { Heading1, Heading2, Heading3, Emphasis, Quote } from './common/typography'
-import { GridContainer, DetailContainer } from './common/container'
+import { Heading2, DetailHeader, DetailValue, Emphasis, Quote, SubHeading} from './common/typography'
+import { GridContainer, DetailContainerColumn, DetailContainerRow } from './common/container'
 
 const Profile = () => {
   const { id } = useParams<{id:string}>()
@@ -36,35 +36,27 @@ const Profile = () => {
 
   return (
     <GridContainer >
-      <Heading1 style={{gridRow: '1 / -1', gridColumn: '1 / 3'}}>
-        <Emphasis>
-          {`< ${user.name} >`}
-        </Emphasis>
-      </Heading1>
-      <DetailContainer>
-        <Heading3>username</Heading3>
-        <Quote> {user.username}</Quote>
-      </DetailContainer>
-      <DetailContainer>
-        <Heading3>email</Heading3>
-        <Quote>{user.email}</Quote>
-      </DetailContainer>
-      <DetailContainer>
-        <Heading3>phone</Heading3>
-        <Quote>{user.phone}</Quote>
-      </DetailContainer>
-      <DetailContainer>
-        <Heading3>company</Heading3>
-        <Quote>{user.company.name}</Quote>
-      </DetailContainer>
-      <DetailContainer>
-        <Heading3>website</Heading3>
-        <Quote>{ user.website}</Quote>
-      </DetailContainer>
-      <DetailContainer>
-        <Heading3>address</Heading3>
-        <Quote> { user.address.street} { user.address.suite } { user.address.city }  { user.address.zipcode}</Quote>
-      </DetailContainer>
+      <DetailContainerRow>
+          <Heading2>{user.name} </Heading2>
+          <Emphasis style={{fontSize: '6rem'}}>@{user.username}</Emphasis>
+      </DetailContainerRow>  
+
+      <DetailContainerColumn>
+        {user.email} <br/>
+        {user.phone}
+      </DetailContainerColumn>
+
+      <div>
+        {user.address.street} <br/>
+        {user.address.suite}  <br/>
+        {user.address.city} <br/>
+        {user.address.zipcode}
+      </div>
+
+      <div>
+        {user.website} <br/>
+        {user.company.name}
+      </div>
     </GridContainer>
       
     

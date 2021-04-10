@@ -30,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const App = () => {
-  const [ theme, setTheme ] = useStoredData('theme', 'light')
+  const { data: theme, setCurrentData: setTheme}  = useStoredData('theme', 'light')
   const [ conventional, setConventional ] = useState(true)
 
   // for switching theme in themeprovider

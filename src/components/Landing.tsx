@@ -8,11 +8,11 @@ import Card from './Card'
 import { Heading2, Quote } from './common/typography'
 
 const LandingBox = styled.div`
-  margin: 2rem auto 0; 
+  margin: 4rem auto 0; 
   padding: 5rem 1rem;
   align-content: flex-start;
   justify-content: space-around;
-  border: 2rem solid ${props => props.theme.primary};
+  border: .2rem solid ${props => props.theme.primary};
   background-color: ${props => props.theme.white};
   border-radius: 1rem;
   
@@ -26,7 +26,7 @@ const LandingBox = styled.div`
   position: relative;
 
   @media screen and (max-width: 488px) {
-    border: .5rem solid ${props => props.theme.primary};
+    border: .1rem solid ${props => props.theme.primary};
   }
 `
 const LandingHeading = styled(Heading2)`
