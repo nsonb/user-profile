@@ -31,20 +31,17 @@ const LandingBox = styled.div`
 `
 const LandingHeading = styled(Heading2)`
   position: absolute;
-  top: -4rem;
-  left: 2rem;
+  top: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
   color: ${props => props.theme.primary};
   background-color: ${props => props.theme.white};
   border: .6rem solid ${props => props.theme.gold};
-  padding: 2rem;
+  padding: 1rem;
+  text-align: center;
 
   @media screen and (max-width: 488px) {
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 1rem;
-    text-align: center;
     width: 90%;
-    top: -3rem;
   }
 `
 

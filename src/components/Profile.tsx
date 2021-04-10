@@ -7,7 +7,7 @@ import { getSinglePlaceHolder } from '../api/placeholder'
 import { AxiosError, AxiosResponse } from 'axios'
 
 // component
-import { Heading2, DetailHeader, DetailValue, Emphasis, Quote, SubHeading} from './common/typography'
+import { Heading2, Emphasis, Quote, SubHeading} from './common/typography'
 import { GridContainer, DetailContainerColumn, DetailContainerRow } from './common/container'
 
 const Profile = () => {
