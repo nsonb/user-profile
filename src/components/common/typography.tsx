@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Heading1 = styled.h1`
   display: block;
-  width: 40rem;
+  min-width: 40rem;
   font-size: 11rem;
   font-family: 'Space Grotesk', sans-serif;
   color: ${props => props.theme.primary};
@@ -24,6 +24,7 @@ export const Heading3 = styled.h3`
   font-size: 1.2rem;
   width: 100%;
   height: fit-content;
+  color: ${props => props.theme.primary};
 `
 
 export const SubHeading = styled.h4`

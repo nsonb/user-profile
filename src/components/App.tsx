@@ -12,14 +12,12 @@ import Landing from './Landing'
 import Header from './Header'
 import Footer from './Footer'
 import Profile from './Profile'
+
+// container
 import { AppContainer } from './common/container'
 
 // routing
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 // global style for reset
 const GlobalStyle = createGlobalStyle`
