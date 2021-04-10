@@ -57,19 +57,23 @@ export const Quote = styled.p`
 `
 
 export const ProfileText = styled.p`
-  font-size: 4.5rem;
+  font-size: 1.4rem;
   font-family: 'Montserrat', sans-serif;
-  color: ${props => props.theme.light_grey};
-  line-height: 3rem;
+  color: ${props => props.theme.dark_grey};
   font-style: italic;
   width: fit-content;
+  &:hover {
+    color: ${props => props.theme.primary};
+  }
 `
 
 export const ProfileHeader = styled.h2`
-  font-size: 10rem;
+  font-size: 6rem;
   font-family: 'Montserrat', sans-serif;
   color: ${props => props.theme.gold};
-  line-height: 7rem;
+  line-height: 6rem;
   width: fit-content;
-  padding: .5rem;
+  text-transform: uppercase;
+  border-bottom: .2rem solid ${props => props.theme.gold};
+  padding:  0 0 2rem 0 ;
 `

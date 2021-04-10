@@ -47,6 +47,11 @@ export const Button = styled.button`
   color: ${props => props.theme.dark_grey};
   cursor: pointer;
   transition: all .4s;
+
+  &:hover {
+    background-color: ${props => props.theme.gold};
+    color: ${props => props.theme.primary};
+  }
 `
 
 //

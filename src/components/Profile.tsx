@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
 import { User } from '../type'
+import styled from 'styled-components'
 
 // axios
 import { getSinglePlaceHolder } from '../api/placeholder'
@@ -11,9 +12,28 @@ import { ProfileText, ProfileHeader } from './common/typography'
 import { GridContainer, DetailContainerColumn, DetailContainerRow } from './common/container'
 import { Button } from './common/interactibles'
 
+const ValueSpan = styled.span`
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  color: ${props => props.theme.gold};
+  font-style: normal;
+  font-weight: 500;
+`
+
+const ProfileButton = styled(Button)`
+  background-color: ${props => props.theme.gold};
+  color: black;
+`
+
+const PseudoElement = styled.div`
+  height: 2rem;
+  width: 100%;
+`
+
 const Profile = () => {
   const { id } = useParams<{id:string}>()
   const [ user, setUser ] = useState<User>()
+  const history = useHistory()
 
   useEffect(() => {
     getSinglePlaceHolder(id)
@@ -36,32 +56,76 @@ const Profile = () => {
   }
 
   return (
-    <GridContainer >
-      <Button>Back</Button>
-      <DetailContainerRow>
-          <ProfileHeader>{user.name}</ProfileHeader>
-          <ProfileText style={{alignSelf: 'end'}}> @{user.username} </ProfileText>
-      </DetailContainerRow>  
+    <GridContainer style={{height: '100%'}}>
+      <Button
+        style={{width: '8rem'}} 
+        onClick={() => {history.goBack()}}>
+          Back
+      </Button>
+
+      <PseudoElement />
 
       <DetailContainerRow>
-        <ProfileText>email: {user.email}</ProfileText>
-        <ProfileText>phone: {user.phone}</ProfileText>
+          <ProfileText> @{user.username} </ProfileText>
+          <ProfileHeader>{user.name}</ProfileHeader>
       </DetailContainerRow>
 
+      <PseudoElement />
+
       <DetailContainerColumn>
-        <ProfileText>Address</ProfileText>
-        <ProfileText>
-          {user.address.street} <br/>
-          {user.address.suite}  <br/>
-          {user.address.city} <br/>
-          {user.address.zipcode}
+        <ProfileText style={{gridColumn: '1 / 3'}}>
+          <ValueSpan>email:</ValueSpan>  <br/>
+          {user.email}
+        </ProfileText>
+        <ProfileText style={{gridColumn: '3/ 5'}}>
+          <ValueSpan>phone:</ValueSpan>  <br/> 
+          {user.phone}
         </ProfileText>
       </DetailContainerColumn>
 
-      <DetailContainerRow>
-        <ProfileText>website: {user.website}</ProfileText>
-        <ProfileText>company: {user.company.name}</ProfileText>
-      </DetailContainerRow>
+      <DetailContainerColumn>
+        <ProfileText>
+          <ValueSpan>
+            street:
+          </ValueSpan>  <br/> 
+          {user.address.street}
+        </ProfileText>
+        <ProfileText>
+          <ValueSpan>
+            suite:
+          </ValueSpan>  <br/>  
+          {user.address.suite}
+        </ProfileText>
+        <ProfileText>
+          <ValueSpan>
+            zip:
+          </ValueSpan>  <br/>  
+          {user.address.zipcode}
+        </ProfileText>
+        <ProfileText>
+          <ValueSpan>
+            city:
+          </ValueSpan>  <br/>  
+          {user.address.city}
+        </ProfileText>
+      </DetailContainerColumn>
+
+      <DetailContainerColumn>
+        <ProfileText style={{gridColumn: '1 / 3'}}>
+          <ValueSpan>
+            website:
+          </ValueSpan>  <br/>  
+          {user.website}
+        </ProfileText>
+        <ProfileText style={{gridColumn: '3 / 5'}}>
+          <ValueSpan>
+            company:
+          </ValueSpan>  <br/>  
+          {user.company.name}
+        </ProfileText>
+      </DetailContainerColumn>
+      <PseudoElement/>
+      <ProfileButton style={{width: '8rem'}}>Contact Me</ProfileButton>
     </GridContainer>
       
     
