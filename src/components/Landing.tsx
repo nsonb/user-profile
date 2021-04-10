@@ -8,7 +8,8 @@ import Card from './Card'
 import { Heading2, Quote } from './common/typography'
 
 const LandingBox = styled.div`
-  margin: 4rem auto 0; 
+  margin: 4rem auto 2rem; 
+  width: 90%;
   padding: 5rem 1rem;
   align-content: flex-start;
   justify-content: space-around;

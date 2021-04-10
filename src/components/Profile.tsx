@@ -7,8 +7,9 @@ import { getSinglePlaceHolder } from '../api/placeholder'
 import { AxiosError, AxiosResponse } from 'axios'
 
 // component
-import { Heading2, Emphasis, Quote, SubHeading} from './common/typography'
+import { ProfileText, ProfileHeader } from './common/typography'
 import { GridContainer, DetailContainerColumn, DetailContainerRow } from './common/container'
+import { Button } from './common/interactibles'
 
 const Profile = () => {
   const { id } = useParams<{id:string}>()
@@ -36,27 +37,31 @@ const Profile = () => {
 
   return (
     <GridContainer >
+      <Button>Back</Button>
       <DetailContainerRow>
-          <Heading2>{user.name} </Heading2>
-          <Emphasis style={{fontSize: '6rem'}}>@{user.username}</Emphasis>
+          <ProfileHeader>{user.name}</ProfileHeader>
+          <ProfileText style={{alignSelf: 'end'}}> @{user.username} </ProfileText>
       </DetailContainerRow>  
 
+      <DetailContainerRow>
+        <ProfileText>email: {user.email}</ProfileText>
+        <ProfileText>phone: {user.phone}</ProfileText>
+      </DetailContainerRow>
+
       <DetailContainerColumn>
-        {user.email} <br/>
-        {user.phone}
+        <ProfileText>Address</ProfileText>
+        <ProfileText>
+          {user.address.street} <br/>
+          {user.address.suite}  <br/>
+          {user.address.city} <br/>
+          {user.address.zipcode}
+        </ProfileText>
       </DetailContainerColumn>
 
-      <div>
-        {user.address.street} <br/>
-        {user.address.suite}  <br/>
-        {user.address.city} <br/>
-        {user.address.zipcode}
-      </div>
-
-      <div>
-        {user.website} <br/>
-        {user.company.name}
-      </div>
+      <DetailContainerRow>
+        <ProfileText>website: {user.website}</ProfileText>
+        <ProfileText>company: {user.company.name}</ProfileText>
+      </DetailContainerRow>
     </GridContainer>
       
     

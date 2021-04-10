@@ -55,3 +55,21 @@ export const Quote = styled.p`
   padding: 1rem;
   font-size: 1.2rem;
 `
+
+export const ProfileText = styled.p`
+  font-size: 4.5rem;
+  font-family: 'Montserrat', sans-serif;
+  color: ${props => props.theme.light_grey};
+  line-height: 3rem;
+  font-style: italic;
+  width: fit-content;
+`
+
+export const ProfileHeader = styled.h2`
+  font-size: 10rem;
+  font-family: 'Montserrat', sans-serif;
+  color: ${props => props.theme.gold};
+  line-height: 7rem;
+  width: fit-content;
+  padding: .5rem;
+`

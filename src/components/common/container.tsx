@@ -12,20 +12,20 @@ export const DefaultContainer = styled.div`
   
 export const DetailContainerColumn = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
 `
 
 export const DetailContainerRow = styled.div`
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: minmax(4rem,1fr);
 `
 
 export const GridContainer = styled.div`
   display: grid;
-  grid-template-rows: 4fr 1fr 1fr 1fr;
+  grid-auto-rows: auto-fit;
   grid-gap: .5rem;
   margin: .5rem;
-  background-color: skyblue;
 `
 
 /*
