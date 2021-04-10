@@ -24,6 +24,7 @@ const CardContainer = styled.div`
   background-color: ${props => props.theme.white};
   color: ${props => props.theme.secondary};
   border-radius: 1rem;
+  border: .2rem solid white;
   margin: .5rem;
   cursor: pointer;
   transition: all .4s;

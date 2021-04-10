@@ -11,6 +11,7 @@ import Landing from './Landing'
 import Header from './Header'
 import Footer from './Footer'
 import Profile from './Profile'
+import { AppContainer } from './common/container'
 
 // routing
 import {
@@ -46,23 +47,25 @@ const App = () => {
     <UserContextProvider>
       <GlobalStyle />
       <ThemeProvider theme={theme? light_theme : dark_theme}>
-        <Router>
-          <Switch>
-            <Route exact path='/'>
-              <Header 
-                setTheme={switchTheme} 
-                mode={theme? 'day' : 'night'} 
-                setConvention = {switchConvention} 
-                conventionMode = {conventional? 'conventional' : 'unconventional'}
-              />
-              <Landing/>
-              <Footer/>
-            </Route>
-            <Route path='/profile/:id'>
-              <Profile/>
-            </Route>
-          </Switch>
-        </Router>
+        <AppContainer>
+          <Router>
+            <Switch>
+              <Route exact path='/'>
+                <Header 
+                  setTheme={switchTheme} 
+                  mode={theme? 'day' : 'night'} 
+                  setConvention = {switchConvention} 
+                  conventionMode = {conventional? 'conventional' : 'unconventional'}
+                />
+                <Landing/>
+              </Route>
+              <Route path='/profile/:id'>
+                <Profile/>
+              </Route>
+            </Switch>
+          </Router>
+        </AppContainer>
+        <Footer/>
       </ThemeProvider>
     </UserContextProvider>
   )

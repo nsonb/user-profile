@@ -11,5 +11,8 @@ export const DefaultContainer = styled.div`
 
 export const GridContainer = styled.div`
   display: grid;
-  
+`
+
+export const AppContainer = styled.div`
+  background-color: ${props => props.theme.white};
 `

@@ -20,7 +20,7 @@ export const dark_theme = {
   light_grey: '#BFBFBF',
   dark_grey: '#D9D9D9',
 
-  white: 'black',
+  white: '#00010D',
   gold: 'gold',
 
   position: 'right'
