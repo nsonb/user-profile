@@ -11,7 +11,7 @@ https://sleepy-torvalds-47f486.netlify.app/
 ## Basic application structure
 The application has the following basic structure:
 
-``JSX
+``javascript
   <App>\
     <Route path = '/'>\
       <Header />\
