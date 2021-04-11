@@ -10,6 +10,8 @@ https://sleepy-torvalds-47f486.netlify.app/
 
 ## Basic application structure
 The application has the following basic structure:
+
+``JSX
   <App>
     <Route path = '/'>
       <Header />
@@ -20,6 +22,7 @@ The application has the following basic structure:
     </Route>
     <Footer/>
   </App>
+``
 
 ## Routing
 As seen above, the app utilizes react-router-dom (BrowserRouter, Switch, Route) for application\
