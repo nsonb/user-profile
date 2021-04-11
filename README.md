@@ -2,6 +2,12 @@
 This is a create-react-app application with typescripts for typechecking.\
 It fetches data from a provided api and display the data on the screen.
 
+## Run the project
+First install all dependencies using 'yarn' in the console.\
+Then to start the project using 'yarn start'.\
+The deployed version of the application can be found at:
+https://sleepy-torvalds-47f486.netlify.app/
+
 ## Basic application structure
 The application has the following basic structure:
   <App>
@@ -38,7 +44,10 @@ themes. The theme choice is then stored into local storage using custom hook use
 
 ## Test
 There are no UI tests in this application. There is one small set of tests for useStoredData\
-custom hook during the writing of its functionalities.
+custom hook during the writing of its functionalities. The test code can be checked out at\ 
+\src\__test__\useStoredData.test.tsx\
+
+Type yarn test in the console to run the tests.
 
 ## Constraint
 Due to the limited amount of time provided for this projects, there are still possible improvements\
