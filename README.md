@@ -12,16 +12,16 @@ https://sleepy-torvalds-47f486.netlify.app/
 The application has the following basic structure:
 
 ``JSX
-  <App>
-    <Route path = '/'>
-      <Header />
-      <Landing />
-    </Route>
-    <Route path = '/profile/:id'>
-      <Profile/>
-    </Route>
-    <Footer/>
-  </App>
+  <App>\
+    <Route path = '/'>\
+      <Header />\
+      <Landing />\
+    </Route>\
+    <Route path = '/profile/:id'>\
+      <Profile/>\
+    </Route>\
+    <Footer/>\
+  </App>\
 ``
 
 ## Routing
@@ -37,7 +37,7 @@ single source of truth of the data.
 ## styled-component components
 This application utilizes styled-components in conjunction with styled objects to\
 to produce components. The shared components are housed in the src/components/common folder,\
-which include commonly reused components for container, interactibles (button, switchbutton)\,
+which include commonly reused components for container, interactibles (button, switchbutton),\
 typography (headings, body text).
 
 ## Theme
