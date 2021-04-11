@@ -10,7 +10,8 @@ export const DefaultContainer = styled.div`
   background-color: ${props => props.theme.white};
   margin-top: 0;
 `
-  
+
+// grid component for use in Profile page
 export const DetailContainerColumn = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -30,7 +31,7 @@ export const GridContainer = styled.div`
   padding: 1rem;
   padding: 2.5rem;
 `
-
+// the container component for the landing page
 export const LandingBox = styled.div`
   margin: 4rem auto 0; 
   width: 90%;
@@ -54,10 +55,27 @@ export const LandingBox = styled.div`
     border: .1rem solid ${props => props.theme.primary};
   }
 `
-
+// container for the app
 export const AppContainer = styled.div`
   background-color: ${props => props.theme.white};
   min-height: 100vh;
+`
+// container for individual user card on landing page
+export const CardContainer = styled.div`
+  display: block;
+  height: 20rem;
+  width: 15rem;
+  margin: 0;
+  padding: .8rem;
+  background-color: ${props => props.theme.white};
+  color: ${props => props.theme.secondary};
+  border-radius: 1rem;
+  border: .2rem solid white;
+  margin: .5rem;
+  cursor: pointer;
+  transition: all .4s;
+  box-shadow: 0px 5px 8px 1px rgba(0,0,0,0.2);
+  position: relative;
 `
 
 // experimental

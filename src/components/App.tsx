@@ -19,7 +19,7 @@ import { AppContainer } from './common/container'
 // routing
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
-// global style for reset
+// global style for reset css value
 const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: inherit;
@@ -34,15 +34,10 @@ const App = () => {
   const [ conventional, setConventional ] = useState(true)
 
   // for switching theme in themeprovider
-  const switchTheme = () => {
-    console.log(theme)
-    theme === 'light'? setTheme('dark') : setTheme('light')
-  }
-
-  const switchConvention = () => {
-    setConventional(!conventional)
-  }
-
+  const switchTheme = () => {theme === 'light'? setTheme('dark') : setTheme('light')}
+  // for switching to experimental layout, not implemented yet
+  const switchConvention = () => {setConventional(!conventional)}
+  
   return (
     <UserContextProvider>
       <GlobalStyle />

@@ -1,37 +1,15 @@
 import styled from 'styled-components'
 import { User } from '../type'
-
-//
+// component
 import { Heading3, SubHeading } from './common/typography'
-import { Avatar, Button } from './common/interactibles'
+import { Avatar, CardButton } from './common/interactibles'
+import { CardContainer as Container} from './common/container'
 
 // navigation
 import { useHistory } from 'react-router-dom'
 
-const CardButton = styled(Button)`
-  position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-`
-
-const CardContainer = styled.div`
-  display: block;
-  height: 20rem;
-  width: 15rem;
-  margin: 0;
-  padding: .8rem;
-  background-color: ${props => props.theme.white};
-  color: ${props => props.theme.secondary};
-  border-radius: 1rem;
-  border: .2rem solid white;
-  margin: .5rem;
-  cursor: pointer;
-  transition: all .4s;
-  box-shadow: 0px 5px 8px 1px rgba(0,0,0,0.2);
-  position: relative;
-
-  &:hover {
+const CardContainer = styled(Container)`
+    &:hover {
     transform: translateY(-.4rem);
     box-shadow: 0px 6px 8px 1px rgba(0,0,0,0.3);
     color: ${props => props.theme.primary};

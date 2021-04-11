@@ -1,5 +1,11 @@
 import styled from 'styled-components'
 
+// typography design for the application
+/* 
+  in retrospect, the application should have used some figma design for streamlined implementation
+  at the moment, there are quite a considerable number of typography on the page that are hard to 
+  keep track of 
+*/
 export const Heading1 = styled.h1`
   display: block;
   min-width: 40rem;

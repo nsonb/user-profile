@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+// switch button that was originally used for theme switching, not in use anymore
 export const SwitchButton = styled.div`
   height: 3rem;
   width: 8rem;
@@ -21,6 +22,7 @@ export const SwitchButton = styled.div`
   }
 `
 
+// custom avatar for each user on card component
 export const Avatar = styled.div`
   background-color: ${props => props.theme.dark_grey};
   height: 9rem;
@@ -54,6 +56,7 @@ export const Button = styled.button`
   }
 `
 
+// back button on profile page
 export const BackButton = styled.button`
   outline: none;
   border: none;
@@ -71,7 +74,7 @@ export const BackButton = styled.button`
     text-decoration: underline;
   }
 `
-
+// contact me button on profile page
 export const ProfileButton = styled(BackButton)`
   background-color: ${props => props.theme.gold};
   color: ${props => props.theme.primary};
@@ -84,4 +87,10 @@ export const ProfileButton = styled(BackButton)`
   }
 `
 
-//
+// the more detail button on card component
+export const CardButton = styled(Button)`
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+`
