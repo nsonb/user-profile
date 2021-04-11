@@ -79,3 +79,11 @@ export const ProfileHeader = styled.h2`
   border-bottom: .2rem solid ${props => props.theme.gold};
   padding:  0 0 2rem 0 ;
 `
+
+export const ValueSpan = styled.span`
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  color: ${props => props.theme.gold};
+  font-style: normal;
+  font-weight: 500;
+`

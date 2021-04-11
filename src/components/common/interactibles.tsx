@@ -72,4 +72,16 @@ export const BackButton = styled.button`
   }
 `
 
+export const ProfileButton = styled(BackButton)`
+  background-color: ${props => props.theme.gold};
+  color: ${props => props.theme.primary};
+  border-radius: .5rem;
+  width: 8rem;
+  padding: 1rem;
+  &:hover {
+    color: ${props => props.theme.white};
+    text-decoration: none;
+  }
+`
+
 //

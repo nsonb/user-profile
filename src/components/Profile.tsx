@@ -1,40 +1,17 @@
 import { useEffect, useState } from 'react'
 import { useParams, useHistory } from 'react-router-dom'
 import { User } from '../type'
-import styled from 'styled-components'
 
 // axios
 import { getSinglePlaceHolder } from '../api/placeholder'
 import { AxiosError, AxiosResponse } from 'axios'
 
 // component
-import { ProfileText, ProfileHeader } from './common/typography'
+import { ProfileText, ProfileHeader, ValueSpan } from './common/typography'
 import { GridContainer, DetailContainerColumn, DetailContainerRow } from './common/container'
-import { Button, BackButton } from './common/interactibles'
+import { ProfileButton, BackButton } from './common/interactibles'
+import { PseudoElement } from './common/pseudo'
 
-const ValueSpan = styled.span`
-  font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
-  color: ${props => props.theme.gold};
-  font-style: normal;
-  font-weight: 500;
-`
-
-const ProfileButton = styled(BackButton)`
-  background-color: ${props => props.theme.gold};
-  color: ${props => props.theme.primary};
-  border-radius: .5rem;
-  padding: 1rem;
-  &:hover {
-    color: ${props => props.theme.white};
-    text-decoration: none;
-  }
-`
-
-const PseudoElement = styled.div`
-  height: 2rem;
-  width: 100%;
-`
 
 const Profile = () => {
   const { id } = useParams<{id:string}>()
@@ -52,14 +29,8 @@ const Profile = () => {
         console.log(err)
       })
   }, [])
-
-  if (user === undefined) {
-    return (
-      <GridContainer>
-        Loading
-      </GridContainer>
-    )
-  }
+  // check for when the data is not yet returned or some error happens when fetching data
+  if (user === undefined) return <GridContainer> Loading </GridContainer>
 
   return (
     <GridContainer style={{height: '100%'}}>
@@ -131,12 +102,9 @@ const Profile = () => {
         </ProfileText>
       </DetailContainerColumn>
       <PseudoElement/>
-      <ProfileButton style={{width: '8rem'}}>Contact Me</ProfileButton>
+      <ProfileButton>Contact Me</ProfileButton>
     </GridContainer>
-      
-    
   )
-  
 }
 
 export default Profile

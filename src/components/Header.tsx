@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 import { useHistory } from 'react-router-dom'
 
+// quote from Oh the places you go
 const randomQuoteFromTheInternet = `Congratulations!
   Today is your day.
   You're off to Great Places!
@@ -32,7 +33,6 @@ const randomQuoteFromTheInternet = `Congratulations!
   OH!
   THE PLACES YOU'LL GO!
 `
-
 const HeaderQuote = styled(Quote)`
   width: 32rem;
   height: 22rem;
@@ -56,10 +56,8 @@ const Header = (props: {
       <DefaultContainer>
         <Heading1 onClick={() => {history.push('/')}}>
           People of the<br/>
-          
           <Emphasis onClick={() => {props.setTheme()}}>{`<${props.mode}>`}</Emphasis>
         </Heading1>
-        
         <HeaderQuote>
           {randomQuoteFromTheInternet}<br/>
           <Emphasis>Dr.Seuss</Emphasis>

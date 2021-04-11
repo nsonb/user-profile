@@ -30,6 +30,36 @@ export const GridContainer = styled.div`
   padding: 4.4vw;
 `
 
+export const LandingBox = styled.div`
+  margin: 4rem auto 2rem; 
+  width: 90%;
+  padding: 5rem 1rem;
+  align-content: flex-start;
+  justify-content: space-around;
+  border: .2rem solid ${props => props.theme.primary};
+  background-color: ${props => props.theme.white};
+  border-radius: 1rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(5rem, 1fr));
+  grid-auto-rows: 23rem;
+  justify-items: center;
+  align-items: center;
+
+  position: relative;
+
+  @media screen and (max-width: 488px) {
+    border: .1rem solid ${props => props.theme.primary};
+  }
+`
+
+export const AppContainer = styled.div`
+  background-color: ${props => props.theme.white};
+  min-height: 100vh;
+`
+
+// experimental
 /*
 div {
     &:nth-child(4n) {
@@ -50,9 +80,3 @@ div {
     }
   }
 */
-
-
-export const AppContainer = styled.div`
-  background-color: ${props => props.theme.white};
-  min-height: 100vh;
-`
