@@ -11,7 +11,6 @@ export const useStoredData = (type: string, defaultValue?: string) => {
         } catch(err) {
             console.log(err)
         }
-        console.log('.')
     }, [type])
 
     useEffect(() => {
@@ -20,7 +19,6 @@ export const useStoredData = (type: string, defaultValue?: string) => {
         } catch(err) {
             console.log(err)
         }
-        console.log('...')
     }, [data, type])
 
     const setCurrentData = (value: string) =>{

@@ -1,13 +1,12 @@
 import { DefaultContainer } from './common/container'
-import { Heading2 } from './common/typography'
+import { Quote } from './common/typography'
 
 const Footer = () => {
   return (
     <DefaultContainer>
-      <Heading2>
-        light of my life
-        fire of my loin
-      </Heading2>
+      <Quote>
+        this is an awesome-app
+      </Quote>
     </DefaultContainer>
   )
 }

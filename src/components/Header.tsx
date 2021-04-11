@@ -36,7 +36,7 @@ const randomQuoteFromTheInternet = `Congratulations!
 const HeaderQuote = styled(Quote)`
   width: 32rem;
   height: 22rem;
-  text-align: right;
+  text-align: left;
 `
 /*
 const Convention = styled(Emphasis)`

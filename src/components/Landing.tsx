@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { UserContext } from '../context/UserContext'
 import { User } from '../type'
 import styled from 'styled-components'
@@ -30,13 +30,15 @@ const LandingQuote = styled(Quote)`
 `
 const Landing = () => {
   const { user, getUser } = useContext(UserContext)
-
+  // stop useEffect on rerender
+  const [ mount, setMount] = useState<Boolean>(false)
   // get user on mount
   useEffect(() => {
-    if(getUser) {
+    if(getUser && !mount) {
       getUser()
+      setMount(true)
     }
-  }, [])
+  }, [getUser, mount])
 
   // when data is not yet returned from server
   if ( user === undefined) return <LandingBox>Loading...</LandingBox>

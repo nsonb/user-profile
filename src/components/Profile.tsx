@@ -28,12 +28,12 @@ const Profile = () => {
       .catch((err: AxiosError) => {
         console.log(err)
       })
-  }, [])
+  }, [id])
   // check for when the data is not yet returned or some error happens when fetching data
   if (user === undefined) return <GridContainer> Loading </GridContainer>
 
   return (
-    <GridContainer style={{height: '100%'}}>
+    <GridContainer style={{height: '90%'}}>
       <BackButton
         style={{width: '8rem'}} 
         onClick={() => {history.goBack()}}>

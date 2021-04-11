@@ -62,6 +62,7 @@ export const ProfileText = styled.p`
   color: ${props => props.theme.dark_grey};
   font-style: italic;
   width: fit-content;
+  transition: all .4s;
   &:hover {
     color: ${props => props.theme.primary};
   }

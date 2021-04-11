@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const DefaultContainer = styled.div`
   height: fit-content;
+  min-height: 3rem;
   padding: 1rem;
   width: 100%;
   display: flex;
@@ -27,11 +28,11 @@ export const GridContainer = styled.div`
   grid-auto-rows: auto-fit;
   grid-gap: .5rem;
   padding: 1rem;
-  padding: 4.4vw;
+  padding: 2.5rem;
 `
 
 export const LandingBox = styled.div`
-  margin: 4rem auto 2rem; 
+  margin: 4rem auto 0; 
   width: 90%;
   padding: 5rem 1rem;
   align-content: flex-start;
